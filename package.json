@@ -1,0 +1,27 @@
+{
+  "name": "money-manager-server",
+  "version": "1.0.0",
+  "description": "Node server for money manager application which contains api's",
+  "main": "app.js",
+  "author": "M V Subhash",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.0"
+  },
+  "scripts": {
+    "format": "yarn prettier --write .",
+    "test": "jest --testEnvironment=node --detectOpenHandles --watch-all"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.3.1",
+    "prettier": "2.3.2"
+  }
+}
