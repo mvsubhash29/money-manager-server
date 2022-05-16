@@ -5,7 +5,7 @@ const verifyToken = (req, res, next) => {
   if (config.DISABLE_VALIDATION === 'true') return next();
 
   const token =
-    req.body.token || req.query.token || req.headers['x-access-token'];
+    req.body.token || req.query.token || req.headers['x-access-token'] || req.cookies.token;
 
   if (!token) {
     return res.status(403).send('A token is required for authentication');

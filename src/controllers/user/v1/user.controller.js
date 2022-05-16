@@ -62,10 +62,13 @@ async function login(req, res, next) {
         expiresIn: config.TOKEN_EXPIRATION
       });
 
+      delete user.password;
       // save user token
       user.token = token;
 
       // user
+      // res.headers('Access-Control-Allow-Credentials', true);
+      res.cookie('token', token);
       res.status(200).json(user);
     } else {
       res.status(400).send('Invalid Credentials');
